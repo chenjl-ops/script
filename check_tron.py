@@ -50,7 +50,7 @@ def check_block_num(l: L, num: int=6) -> dict:
         return {"code": 0, "message": "sync success"}
  
 # test
-async def get_tron_data() -> list:
+async def get_tron_data() -> dict:
     task_list = list()
     task_list.append(asyncio.create_task(get_check_data_num("1", tron_url)))
     for url in check_urls:
